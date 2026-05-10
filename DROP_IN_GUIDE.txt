@@ -1,0 +1,73 @@
+# CCTV App — Complete File Drop-In Guide
+# Every file from this package + the original guide, mapped to its exact project path.
+
+## Step 1 — Create the project in Android Studio
+  New Project → Empty Views Activity → Kotlin → min SDK 26
+  Package name: com.example.cctv
+
+## Step 2 — Drop in files from this package
+
+FROM THIS PACKAGE                          → DESTINATION IN PROJECT
+─────────────────────────────────────────────────────────────────────────────
+res/layout/activity_main.xml              → app/src/main/res/layout/
+res/values/colors.xml                     → app/src/main/res/values/
+res/values/themes.xml                     → app/src/main/res/values/  (REPLACE existing)
+res/values/strings.xml                    → app/src/main/res/values/  (REPLACE existing)
+res/drawable/ic_camera.xml                → app/src/main/res/drawable/
+res/drawable/ic_stop.xml                  → app/src/main/res/drawable/
+res/drawable/ic_motion.xml                → app/src/main/res/drawable/
+res/drawable/ic_wifi.xml                  → app/src/main/res/drawable/
+res/drawable/ic_copy.xml                  → app/src/main/res/drawable/
+res/drawable/ic_moon.xml                  → app/src/main/res/drawable/
+res/drawable/ic_settings.xml              → app/src/main/res/drawable/
+res/drawable/bg_dot_active.xml            → app/src/main/res/drawable/
+res/drawable/bg_dot_rec.xml               → app/src/main/res/drawable/
+res/drawable/bg_rec_badge.xml             → app/src/main/res/drawable/
+res/drawable/bg_chip.xml                  → app/src/main/res/drawable/
+res/drawable/bg_btn_secondary.xml         → app/src/main/res/drawable/
+res/drawable/bg_btn_danger.xml            → app/src/main/res/drawable/
+res/drawable/bg_scanlines.xml             → app/src/main/res/drawable/
+ui/MainActivity.kt                        → app/src/main/java/com/example/cctv/ui/
+service/CameraForegroundService.kt        → app/src/main/java/com/example/cctv/service/
+camera/CameraProvider.kt                  → app/src/main/java/com/example/cctv/camera/
+
+## Step 3 — Copy from the ORIGINAL GUIDE (CCTV_Android_App_Guide.md)
+
+Kotlin files to create (copy code blocks exactly):
+
+FILE                                       PACKAGE PATH
+─────────────────────────────────────────────────────────────────────────────
+CctvApplication.kt                        → .../com/example/cctv/
+service/BootReceiver.kt                   → .../com/example/cctv/service/
+camera/MotionAnalyzer.kt                  → .../com/example/cctv/camera/
+streaming/MjpegServer.kt                  → .../com/example/cctv/streaming/
+storage/VideoStorageManager.kt            → .../com/example/cctv/storage/
+alert/AlertManager.kt                     → .../com/example/cctv/alert/
+util/NetworkUtils.kt                      → .../com/example/cctv/util/
+util/PowerManager.kt  (ScreenPowerManager)→ .../com/example/cctv/util/
+ui/SettingsFragment.kt                    → .../com/example/cctv/ui/
+
+XML files to create:
+res/xml/preferences.xml                   → app/src/main/res/xml/
+
+## Step 4 — Replace build.gradle.kts
+  Use the full contents from Section 1 of the original guide.
+
+## Step 5 — Replace AndroidManifest.xml
+  Use the full contents from Section 1 of the original guide.
+
+## Step 6 — Add a launcher icon
+  Android Studio → right-click res → New → Image Asset
+  Choose any camera icon. This generates mipmap/ic_launcher*.
+
+## Step 7 — Build & Run
+  Connect Android device via USB → Run 'app'
+  Grant Camera + Notification permissions when prompted.
+  Tap "Open Settings" on the battery optimization dialog.
+
+## Notes
+- The two _README files in res/drawable/ are documentation only, not real drawables.
+  Delete them before building (or Android Studio will warn about unknown resource format).
+- activity_main.xml references androidx.camera.view.PreviewView which comes from
+  the CameraX view dependency already in build.gradle.kts.
+- themes.xml uses Theme.MaterialComponents — requires the Material dependency in gradle.

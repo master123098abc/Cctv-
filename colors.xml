@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ── Backgrounds ──────────────────────────────────────────── -->
+    <color name="bg_deep">#0A0C0A</color>
+    <color name="bg_surface">#111411</color>
+    <color name="bg_inset">#0D100D</color>
+
+    <!-- ── Accent ────────────────────────────────────────────────── -->
+    <color name="green_accent">#39FF6A</color>
+    <color name="green_dim">#1A6632</color>
+    <color name="red_alert">#FF2D2D</color>
+    <color name="red_dim">#5C1010</color>
+    <color name="amber">#FFB300</color>
+
+    <!-- ── Text ──────────────────────────────────────────────────── -->
+    <color name="text_primary">#E8F5E9</color>
+    <color name="text_secondary">#7A9C7E</color>
+    <color name="text_dim">#3E5C42</color>
+
+    <!-- ── Notification ──────────────────────────────────────────── -->
+    <color name="notification_color">#39FF6A</color>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CCTV Monitor</string>
+    <string name="channel_service_name">CCTV Service</string>
+    <string name="channel_alert_name">Motion Alerts</string>
+    <string name="notif_service_title">CCTV Active</string>
+    <string name="notif_service_text">Camera running — tap to open</string>
+    <string name="notif_motion_title">⚠ Motion Detected</string>
+    <string name="btn_stop">Stop</string>
+    <string name="btn_power_saver">Power Saver</string>
+    <string name="btn_wake">Wake Screen</string>
+    <string name="btn_settings">Settings</string>
+    <string name="label_stream">Stream URL</string>
+    <string name="label_monitoring">● MONITORING</string>
+    <string name="label_motion">⚠ MOTION DETECTED</string>
+    <string name="copy_success">URL copied to clipboard</string>
+</resources>

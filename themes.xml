@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.CCTV" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/green_accent</item>
+        <item name="colorPrimaryVariant">@color/green_dim</item>
+        <item name="colorOnPrimary">@color/bg_deep</item>
+        <item name="colorSurface">@color/bg_surface</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="android:windowBackground">@color/bg_deep</item>
+        <item name="android:statusBarColor">@color/bg_surface</item>
+        <item name="android:navigationBarColor">@color/bg_surface</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:fontFamily">monospace</item>
+        <!-- Keep screen on at OS level while activity is visible -->
+        <item name="android:keepScreenOn">true</item>
+    </style>
+
+    <!-- Preference screen inherits same dark palette -->
+    <style name="Theme.CCTV.Settings" parent="Theme.CCTV">
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+    </style>
+</resources>
